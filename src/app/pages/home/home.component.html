@@ -1,0 +1,7 @@
+<button nz-button nzType="primary" (click)="addChart()">ADD CHART</button>
+
+<gridster [options]="options">
+  <gridster-item [item]="item" *ngFor="let item of dashboard; index as i" #gridsterItem>
+    <app-widget [item]="item" [unitHeight]="unitHeight" [index]="i"></app-widget>
+  </gridster-item>
+</gridster>
